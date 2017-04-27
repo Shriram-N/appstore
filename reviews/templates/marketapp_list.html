@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{%block title%}
+<h2>Latest MarketApp</h2>
+{%endblock%}
+
+{%block content%}
+{% if marketapp_list %}
+<div>
+    {% for marketapp in marketapp_list %}
+    <div>
+        <h4><a href="{% url 'reviews:marketapp_detail' marketapp.id %}">
+        {{marketapp.name }}
+        </a></h4>
+
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No Apps are available</p>
+{% endif %}
+{% endblock %}

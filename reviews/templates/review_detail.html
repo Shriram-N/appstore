@@ -1,0 +1,6 @@
+<h2> Review Details</h2>
+
+{{ review.marketapp.name }}
+</a></h4>
+<h4>Rated {{ review.rating }} of 5 by <a href="{% url 'reviews:user_review_list' review.user_name %}" >{{ review.user_name }}</a></h4>
+<p>{{ review.comment }}</p>
